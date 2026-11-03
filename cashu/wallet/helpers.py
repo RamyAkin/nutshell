@@ -37,7 +37,7 @@ async def list_mints(wallet: Wallet):
 
 async def redeem_TokenV3(wallet: Wallet, token: TokenV3) -> Wallet:
     """
-    Helper function to iterate thruogh a token with multiple mints and redeem them from
+    Helper function to iterate through a token with multiple mints and redeem them from
     these mints one keyset at a time.
     """
     if not token.unit:

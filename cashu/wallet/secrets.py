@@ -110,7 +110,7 @@ class WalletSecrets(SupportsDb, SupportsKeysets):
         self, counter: int, keyset_id: Optional[str] = None
     ) -> Tuple[bytes, bytes, str]:
         """
-        Determinstically generates two secrets (one as the secret message,
+        Deterministically generates two secrets (one as the secret message,
         one as the blinding factor) using versioned derivation.
 
         NUT-13: Uses keyset version to determine derivation method:

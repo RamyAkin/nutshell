@@ -67,17 +67,17 @@ def get_bolt11_and_invoice_id_from_invoice_command(output: str) -> Tuple[str, st
 
 
 def get_invoice_from_invoices_command(output: str) -> dict[str, str]:
-    splitted = output.split("\n")
-    removed_empty_and_hiphens = [
-        value for value in splitted if value and not value.startswith("-----")
+    split_lines = output.split("\n")
+    removed_empty_and_hyphens = [
+        value for value in split_lines if value and not value.startswith("-----")
     ]
     # filter only lines that have ": " in them
-    removed_empty_and_hiphens = [
-        value for value in removed_empty_and_hiphens if ": " in value
+    removed_empty_and_hyphens = [
+        value for value in removed_empty_and_hyphens if ": " in value
     ]
     dict_output = {
         f"{value.split(': ')[0]}": value.split(": ")[1]
-        for value in removed_empty_and_hiphens
+        for value in removed_empty_and_hyphens
     }
 
     return dict_output

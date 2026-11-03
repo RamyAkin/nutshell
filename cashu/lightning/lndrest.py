@@ -111,7 +111,7 @@ class LndRestWallet(LightningBackend):
         # even on startup
         self.cert = cert or True
 
-        # disable cert verify if choosen
+        # disable cert verify if chosen
         if not cert_verify:
             self.cert = False
 

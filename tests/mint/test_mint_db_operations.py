@@ -480,7 +480,7 @@ async def test_store_and_sign_blinded_message(ledger: Ledger):
     B_pubkey, _ = step1_alice("test_store_and_sign_blinded_message")
     B_hex = B_pubkey.format().hex()
 
-    # Act: store the blinded message (unsinged promise row)
+    # Act: store the blinded message (unsigned promise row)
     await ledger.crud.store_blinded_message(
         db=ledger.db,
         amount=amount,
